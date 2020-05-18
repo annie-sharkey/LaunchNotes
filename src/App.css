@@ -28,6 +28,31 @@
   color: #61dafb;
 }
 
+h1 {
+  background-color: lightslategray;
+  margin: 0px;
+  color: white;
+}
+body {
+  background-color: lightskyblue;
+}
+.title {
+  font-weight: bold;
+  display: block;
+}
+.description {
+  font-weight: bold;
+  display: block;
+}
+input[type="text"] {
+  width: 50%;
+  padding: 6px 10px;
+  margin: 8px 0;
+}
+ol {
+  font-weight: bold;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
