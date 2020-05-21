@@ -15,11 +15,25 @@ class App extends Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
   }
-
+/*
+When we use arrow functions like handleClick = () => {} we don't need to include
+the above bind this. Makes for simpler code. 
+*/
   handleClick() {
     const date = new Date();
     const title = document.getElementById("title").value;
     const desc = document.getElementById("desc").value;
+    /*
+    Instead of concating a note to state, I'd instead like to see the creation of
+    a new array like this:
+    this.setState(prevState => ({notes: [...prevState.notes, newNote]}))
+    
+    In your notes array, I would like to see a list of objects like [{title: title, description, description}, {title: title, description, description}, etc]
+    Do not store styling in your array -- just the data.
+    Then in your return use map to give each object styling like
+    this.state.notes.map(note => {<div>{note.title}</div>}
+    
+    */
     this.setState({
       notes: this.state.notes.concat(
         <li key={title}>
